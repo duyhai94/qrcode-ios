@@ -1,0 +1,173 @@
+<ion-header>
+    <ion-grid>
+        <ion-row>
+            <ion-col col="2">
+                <ion-buttons>
+                    <ion-back-button
+                        text=""
+                        [icon]="buttonIcon"
+                        defaultHref="/home"
+                    >
+                    </ion-back-button>
+                </ion-buttons>
+            </ion-col>
+
+            <ion-col col="8">
+                <div>
+
+                    <img
+                        src="assets/icon/logo-app.svg"
+                        alt=""
+                    >
+                </div>
+
+            </ion-col>
+
+            <ion-col col="2">
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <!-- card -->
+            <ion-col size="12">
+                <ion-card>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="2">
+                                <img
+                                    src="assets/icon/icon-navigate.svg"
+                                    alt=""
+                                >
+                            </ion-col>
+
+                            <ion-col size="10">
+                                <h4>
+                                    NEGATIVE
+                                </h4>
+
+                                <p>
+                                    A negative result means that the virus was not detected in the sample you provided.
+                                    The suit suggests you were negative at the time of testing.
+                                </p>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-card>
+            </ion-col>
+
+            <ion-col
+                size="12"
+                class="detail"
+            >
+                <mat-accordion class="box example-headers-align">
+                    <mat-expansion-panel
+                        [expanded]="step === 0"
+                        class="mat-elevation-z0"
+                    >
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="header">
+                                Patient Information
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+                        <div
+                            *ngFor="let i of dataInfo"
+                            class="detail-box"
+                        >
+                            <ion-label position="stacked">
+                                <div>{{i.label}}</div>
+                            </ion-label>
+                            <ion-input [(ngModel)]="i.value"></ion-input>
+                        </div>
+                    </mat-expansion-panel>
+
+
+
+                    <mat-expansion-panel
+                        [expanded]="step === 1"
+                        class="mat-elevation-z0"
+                    >
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="header">
+                                Accession
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+                        <div
+                            *ngFor="let i of dataAcc"
+                            class="detail-box"
+                        >
+                            <ion-label position="stacked">
+                                <div>{{i.label}}</div>
+                            </ion-label>
+                            <ion-input [(ngModel)]="i.value"></ion-input>
+                        </div>
+                    </mat-expansion-panel>
+
+
+
+
+                    <mat-expansion-panel
+                        [expanded]="step === 2"
+                        class="mat-elevation-z0"
+                    >
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="header">
+                                Physician
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+                        <div
+                            *ngFor="let i of dataPhy"
+                            class="detail-box"
+                        >
+                            <ion-label position="stacked">
+                                <div>{{i.label}}</div>
+                            </ion-label>
+                            <ion-input [(ngModel)]="i.value"></ion-input>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </ion-col>
+
+
+        </ion-row>
+    </ion-grid>
+
+
+
+
+
+</ion-content>
+
+<ion-footer>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="3">
+                <img
+                    src="assets/icon/qr-code.svg"
+                    alt=""
+                >
+            </ion-col>
+
+            <ion-col size="9">
+
+                <div class="text">
+                    Email: info@mdcareclik.com
+                </div>
+                <div class="text">
+                    Website: www.mdcareclik.com
+                </div>
+                <div class="text">
+                    Hotline: 000xxx - 00xx
+                </div>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

@@ -1,0 +1,29 @@
+.qr-code {
+//   background-color: #848484;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+}
+.backbtn_wrap {
+}
+
+.danger {
+  color: red;
+  text-align: center;
+  word-break: break-all;
+}
+.info {
+    text-align: center;
+    padding: 0px;
+
+
+}
+ion-grid {
+  height: 100%;
+  display: grid;
+}
+ion-col {
+  align-self: center;
+}
